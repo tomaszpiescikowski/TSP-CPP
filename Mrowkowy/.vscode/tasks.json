@@ -1,0 +1,20 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "g++",
+            //bez headerow//"args": ["-g", "${file}", "-o", "${fileDirname}/${fileBasenameNoExtension}"],
+            //z headereami ponizej // alternatywa f6
+            "args": ["-g", "${fileDirname}/*.cpp", "-o", "${fileDirname}/${fileBasenameNoExtension}"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+            
+        }
+    ]
+}
